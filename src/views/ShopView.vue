@@ -24,12 +24,22 @@
         v-if="pokemonCount > pokemons.length"
       >
         <button class="btn btn-primary" @click="fetchPokemons(pokemons.length)">
+          <i class="bi-arrow-clockwise me-2" v-if="!loading"></i>
+          <div
+            class="spinner-border spinner-border-sm me-2"
+            role="status"
+            v-else
+          >
+            <span class="visually-hidden">Loading...</span>
+          </div>
           Load more
         </button>
       </div>
     </div>
     <div v-else>
-      <span>Loading...</span>
+      <div class="spinner-border" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
     </div>
   </div>
 </template>

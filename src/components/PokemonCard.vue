@@ -12,10 +12,11 @@
       </p>
       <div class="d-flex flex-column justify-content-center gap-2">
         <button @click="$emit('addCart', pokemon)" class="btn btn-success">
+          <i class="bi-cart-plus me-2"></i>
           Add to cart
         </button>
         <router-link class="btn btn-primary" :to="`/pokemon/${pokemon.id}`"
-          >More information</router-link
+          ><i class="bi-info-circle me-2"></i> More information</router-link
         >
       </div>
     </div>

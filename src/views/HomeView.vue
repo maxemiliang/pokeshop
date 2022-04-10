@@ -25,8 +25,10 @@
         </button>
       </div>
     </div>
-    <div v-else>
-      <span class="text-green"> Loading... </span>
+    <div class="w-100 d-flex justify-content-center align-items-center" v-else>
+      <div class="spinner-border" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
     </div>
   </div>
 </template>

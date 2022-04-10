@@ -1,12 +1,17 @@
 <template>
   <div class="cart">
-    <div class="row">
+    <div class="row" v-if="cart && cart.length > 0">
       <CartItem
         v-bind:key="id"
         v-for="id in Object.keys(cartItems)"
         @removeCart="$emit('removeCart', id)"
         :item="cartItems[id]"
       />
+    </div>
+    <div v-else>
+      <div class="d-flex justify-content-center align-items-center">
+        <h3 class="fw-bold text-danger">No items in cart</h3>
+      </div>
     </div>
   </div>
 </template>
