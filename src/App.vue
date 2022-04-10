@@ -1,7 +1,7 @@
 <template>
-  <NavBar></NavBar>
+  <NavBar :cart="cart"></NavBar>
   <div class="container mt-4">
-    <router-view />
+    <router-view @addCart="handleAddCart" />
   </div>
 </template>
 
@@ -17,6 +17,11 @@ export default {
     return {
       cart: [],
     };
+  },
+  methods: {
+    handleAddCart(pokemon) {
+      this.cart.push(pokemon);
+    },
   },
 };
 </script>

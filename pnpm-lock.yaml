@@ -9,6 +9,7 @@ specifiers:
   '@vue/cli-plugin-router': ~5.0.0
   '@vue/cli-service': ~5.0.0
   bootstrap: ^5.1.3
+  bootstrap-icons: ^1.8.1
   core-js: ^3.8.3
   eslint: ^7.32.0
   eslint-plugin-vue: ^8.0.3
@@ -20,6 +21,7 @@ specifiers:
 dependencies:
   '@popperjs/core': 2.11.5
   bootstrap: 5.1.3_@popperjs+core@2.11.5
+  bootstrap-icons: 1.8.1
   core-js: 3.21.1
   jquery: 3.6.0
   pokeapi-js-wrapper: 1.2.2
@@ -2401,6 +2403,11 @@ packages:
   /boolbase/1.0.0:
     resolution: {integrity: sha1-aN/1++YMUes3cl6p4+0xDcwed24=}
     dev: true
+
+  /bootstrap-icons/1.8.1:
+    resolution: {integrity: sha512-IXUqislddPJfwq6H+2nTkHyr9epO9h6u1AG0OZCx616w+TgzeoCjfmI3qJMQqt1J586gN2IxzB4M99Ip4sTZ1w==}
+    engines: {node: '>=10'}
+    dev: false
 
   /bootstrap/5.1.3_@popperjs+core@2.11.5:
     resolution: {integrity: sha512-fcQztozJ8jToQWXxVuEyXWW+dSo8AiXWKwiSSrKWsRB/Qt+Ewwza+JWoLKiTuQLaEPhdNAJ7+Dosc9DOIqNy7Q==}

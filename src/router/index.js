@@ -16,6 +16,12 @@ const routes = [
     component: () =>
       import(/* webpackChunkName: "about" */ '../views/ShopView.vue'),
   },
+  {
+    path: '/pokemon/:id',
+    name: 'pokemon',
+    component: () =>
+      import(/* webpackChunkName: "pokemon" */ '../views/PokemonView.vue'),
+  },
 ];
 
 const router = createRouter({
