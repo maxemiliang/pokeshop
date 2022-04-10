@@ -1,10 +1,21 @@
 <template>
   <div class="about">
-    <h1>PokeShop</h1>
+    <div class="d-flex flex-row justify-content-between mb-4">
+      <h1>PokeShop</h1>
+      <div class="d-flex">
+        <input
+          class="form-control me-2"
+          type="search"
+          placeholder="Search"
+          aria-label="Search"
+          v-model="search"
+        />
+      </div>
+    </div>
     <div class="row shop" v-if="!loading || pokemons.length > 0">
       <PokemonCard
         v-bind:key="pokemon.id"
-        v-for="pokemon in pokemons"
+        v-for="pokemon in pokemonList"
         :pokemon="pokemon"
         @addCart="handleAddCart"
       />
@@ -35,6 +46,7 @@ export default {
       pokemons: [],
       pokemonCount: 0,
       loading: false,
+      search: '',
     };
   },
   components: {
@@ -71,6 +83,16 @@ export default {
         this.pokemons.push(pokemon);
       }
       this.loading = false;
+    },
+  },
+  computed: {
+    pokemonList() {
+      if (this.search !== '') {
+        return this.pokemons.filter((pokemon) =>
+          pokemon.name.toLowerCase().includes(this.search.toLowerCase())
+        );
+      }
+      return this.pokemons;
     },
   },
 };

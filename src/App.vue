@@ -1,7 +1,11 @@
 <template>
   <NavBar :cart="cart"></NavBar>
   <div class="container mt-4">
-    <router-view @addCart="handleAddCart" />
+    <router-view
+      :cart="cart"
+      @addCart="handleAddCart"
+      @removeCart="handleRemoveCart"
+    />
   </div>
 </template>
 
@@ -21,6 +25,10 @@ export default {
   methods: {
     handleAddCart(pokemon) {
       this.cart.push(pokemon);
+    },
+    handleRemoveCart(id) {
+      id = parseInt(id);
+      this.cart = [...this.cart.filter((pokemon) => pokemon.id !== id)];
     },
   },
 };

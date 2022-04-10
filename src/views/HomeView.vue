@@ -6,7 +6,7 @@
       <p>We currently have {{ pokemonCount }} pokemons available.</p>
       <div class="d-flex">
         <button
-          class="btn btn-primary me-4"
+          class="btn btn-primary"
           @click="$router.push({ path: '/shop' })"
         >
           Take me to the shop
@@ -60,3 +60,9 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+button {
+  margin-right: 1rem;
+}
+</style>

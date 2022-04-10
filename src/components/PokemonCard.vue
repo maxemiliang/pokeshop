@@ -1,6 +1,6 @@
 <template>
   <div class="col-lg-3 col-md-4 col-6 mb-4">
-    <div class="card p-4">
+    <div class="card">
       <img :src="pokemonImage" alt="" />
       <h3>{{ pokemon.name }}</h3>
       <p>
@@ -45,4 +45,8 @@ export default {
 };
 </script>
 
-<style></style>
+<style scoped>
+.card {
+  padding: 1.25rem;
+}
+</style>
