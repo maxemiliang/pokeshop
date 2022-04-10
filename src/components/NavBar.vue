@@ -1,12 +1,12 @@
 <template>
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
-      <a class="navbar-brand" href="/"
+      <router-link class="navbar-brand" to="/"
         ><img
           class="navbar-brand-logo"
           alt="Vue logo"
           src="https://fontmeme.com/permalink/220410/6194fb6887610ecb54f31268724cd564.png"
-      /></a>
+      /></router-link>
       <button
         class="navbar-toggler"
         type="button"
